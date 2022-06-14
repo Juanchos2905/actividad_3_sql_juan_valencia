@@ -56,16 +56,17 @@ CREATE TABLE IF NOT EXISTS `products` (
   `name` varchar(45) NOT NULL DEFAULT '0',
   `product_size` varchar(45) NOT NULL DEFAULT '0',
   `product_imported` bit(1) NOT NULL DEFAULT b'1',
+  `value_product` float NOT NULL,
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table tienda_deportiva_el_podio.products: ~3 rows (approximately)
 DELETE FROM `products`;
-INSERT INTO `products` (`id`, `name`, `product_size`, `product_imported`) VALUES
-	(1, 'sneakers', '9.5 US', b'1'),
-	(2, 't-shirt', 'L', b'1'),
-	(3, 'sports bag', '35 cm', b'0');
+INSERT INTO `products` (`id`, `name`, `product_size`, `product_imported`, `value_product`) VALUES
+	(1, 'sneakers', '9.5 US', b'1', 325000),
+	(2, 't-shirt', 'L', b'1', 69900),
+	(3, 'sports bag', '35 cm', b'0', 420000);
 
 -- Dumping structure for table tienda_deportiva_el_podio.selling
 CREATE TABLE IF NOT EXISTS `selling` (
